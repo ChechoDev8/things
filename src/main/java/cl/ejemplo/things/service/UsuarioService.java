@@ -1,13 +1,17 @@
 package cl.ejemplo.things.service;
 
-import cl.ejemplo.things.model.Usuario;
-import lombok.NoArgsConstructor;
+import cl.ejemplo.things.concreteclasses.Usuario;
+import cl.ejemplo.things.model.UsuarioEntity;
 
-@NoArgsConstructor
 public class UsuarioService {
 
-	public String MessageUsuario(Usuario user) {
-		String message = "Hola " + user.getNombre() + ", password: " + user.getPass() + " y correo: " + user.getMail();
-		return message;
+private final Usuario user;
+	
+	public UsuarioService(Usuario user) {
+		this.user = user;
+	}
+	
+	public String execUsuario(UsuarioEntity userEntity) {
+		return this.user.MessageUsuario(userEntity);
 	}
 }

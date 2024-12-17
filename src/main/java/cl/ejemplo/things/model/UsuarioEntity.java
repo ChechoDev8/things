@@ -11,7 +11,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Usuario {
+public class UsuarioEntity {
 	
 	private String nombre;
 	private String pass;
